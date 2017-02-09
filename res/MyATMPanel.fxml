@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.33607907742998355, 0.6672158154859967" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+   <items>
+      <AnchorPane fx:id="ATM1PutInFifties" prefHeight="361.0" prefWidth="204.0" snapToPixel="false">
+         <children>
+            <Button fx:id="ATM1TakeOut" layoutX="3.0" layoutY="-129.0" mnemonicParsing="false" onAction="#TakeOut1" prefHeight="30.0" prefWidth="194.0" text="Take Out" translateX="1.0" translateY="370.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+            <Button layoutX="4.0" layoutY="30.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" text="ATM 1">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Button>
+            <MenuBar fx:id="MenuBarATM1" layoutX="3.0" layoutY="1.0" prefHeight="29.0" prefWidth="198.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="closeButton" mnemonicParsing="false" onAction="#closeButton" text="Close" />
+                        <MenuItem fx:id="saveATM1" mnemonicParsing="false" onAction="#saveATM1" text="Save ATM1" />
+                        <MenuItem fx:id="saveATM2" mnemonicParsing="false" onAction="#saveATM2" text="Save ATM2" />
+                        <MenuItem fx:id="saveATM3" mnemonicParsing="false" onAction="#saveATM3" text="Save ATM3" />
+                        <MenuItem fx:id="openATM1" mnemonicParsing="false" onAction="#openATM1" text="Open ATM1" />
+                        <MenuItem fx:id="openATM2" mnemonicParsing="false" onAction="#openATM2" text="Open ATM2" />
+                        <MenuItem fx:id="openATM3" mnemonicParsing="false" onAction="#openATM3" text="Open ATM3" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label layoutX="16.0" layoutY="175.0" prefHeight="25.0" prefWidth="100.0" text="Hundreds" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="130.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="239.0" prefHeight="25.0" prefWidth="100.0" text="Fifties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="293.0" prefHeight="25.0" prefWidth="100.0" text="Twenties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="265.0" prefHeight="25.0" prefWidth="90.0" text="Amount" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="5.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="amount1" layoutX="120.0" layoutY="270.0" onAction="#TakeOut1" prefHeight="25.0" prefWidth="80.0" AnchorPane.bottomAnchor="98.0" AnchorPane.rightAnchor="4.0" />
+            <Button fx:id="ATM1PutIn" layoutX="5.0" layoutY="303.0" mnemonicParsing="false" onAction="#PutIn1" prefHeight="30.0" prefWidth="194.0" text="Put In" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+            <Label layoutX="7.0" layoutY="334.0" prefHeight="30.0" prefWidth="52.0" text="Hundreds" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="5.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="336.0" prefHeight="30.0" prefWidth="74.0" text="     Fifties" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="63.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="333.0" prefHeight="30.0" prefWidth="60.0" text="Twenties" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hundreds1" layoutX="5.0" layoutY="364.0" onAction="#PutIn1" prefHeight="25.0" prefWidth="52.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" />
+            <TextField fx:id="fifties1" layoutX="68.0" layoutY="362.0" onAction="#PutIn1" prefHeight="25.0" prefWidth="60.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="76.0" />
+            <TextField fx:id="twenties1" layoutX="140.0" layoutY="365.0" prefHeight="25.0" prefWidth="60.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="5.0" />
+            <Label fx:id="label1Hundreds" layoutX="137.0" layoutY="134.0" prefHeight="25.0" prefWidth="52.0" text="0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="130.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="label1Fifties" layoutX="121.0" layoutY="163.0" prefHeight="25.0" prefWidth="52.0" text="0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="label1Twenties" layoutX="132.0" layoutY="192.0" prefHeight="25.0" prefWidth="52.0" text="0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="488.0" prefWidth="201.0">
+         <children>
+            <Button fx:id="ATM2TakeOut" layoutX="-127.0" layoutY="-130.0" mnemonicParsing="false" onAction="#TakeOut2" prefHeight="30.0" prefWidth="194.0" text="Take Out" translateX="133.0" translateY="370.0" AnchorPane.leftAnchor="-127.0" AnchorPane.rightAnchor="139.0" />
+            <Button fx:id="ATM2PutIn" layoutX="4.0" layoutY="-68.0" mnemonicParsing="false" onAction="#PutIn2" prefHeight="30.0" prefWidth="99.0" text="Put In" translateX="1.0" translateY="370.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+            <Button layoutX="-5.0" layoutY="30.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" text="ATM 2">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Button>
+            <ToggleButton fx:id="SuspendAll" layoutX="1.0" layoutY="4.0" mnemonicParsing="false" onAction="#suspendAll" prefHeight="25.0" prefWidth="197.0" text="Suspend All ATMs" />
+            <TextField fx:id="amount2" layoutX="128.0" layoutY="271.0" onAction="#TakeOut2" prefHeight="25.0" prefWidth="80.0" AnchorPane.bottomAnchor="98.0" AnchorPane.rightAnchor="4.0" />
+            <Label layoutX="22.0" layoutY="148.0" prefHeight="25.0" prefWidth="100.0" text="Hundreds" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="130.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="192.0" prefHeight="25.0" prefWidth="100.0" text="Fifties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="226.0" prefHeight="25.0" prefWidth="100.0" text="Twenties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="275.0" prefHeight="25.0" prefWidth="90.0" text="Amount" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="5.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="-1.0" layoutY="344.0" prefHeight="30.0" prefWidth="52.0" text="Hundreds" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="5.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="336.0" prefHeight="30.0" prefWidth="74.0" text="     Fifties" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="64.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="147.0" layoutY="331.0" prefHeight="30.0" prefWidth="60.0" text="Twenties" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hundreds2" layoutX="15.0" layoutY="365.0" prefHeight="25.0" prefWidth="52.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" />
+            <TextField fx:id="fifties2" layoutX="93.0" layoutY="359.0" prefHeight="25.0" prefWidth="60.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="65.0" />
+            <TextField fx:id="twenties2" layoutX="146.0" layoutY="361.0" prefHeight="25.0" prefWidth="60.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="5.0" />
+            <Label fx:id="label2Twenties" layoutX="137.0" layoutY="189.0" prefHeight="25.0" prefWidth="52.0" text="0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="label2Fifties" layoutX="143.0" layoutY="166.0" prefHeight="25.0" prefWidth="52.0" text="0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="label2Hundreds" layoutX="130.0" layoutY="134.0" prefHeight="25.0" prefWidth="52.0" text="0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="130.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="398.0" prefWidth="371.0">
+         <children>
+            <Button fx:id="ATM3PutIn" layoutX="5.0" layoutY="-68.0" mnemonicParsing="false" onAction="#PutIn3" prefHeight="30.0" prefWidth="99.0" text="Put In" translateX="1.0" translateY="370.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+            <Button fx:id="ATM3TakeOut" layoutX="-127.0" layoutY="-130.0" mnemonicParsing="false" onAction="#TakeOut3" prefHeight="30.0" prefWidth="180.0" text="Take Out" translateX="133.0" translateY="370.0" AnchorPane.leftAnchor="-127.0" AnchorPane.rightAnchor="140.0" />
+            <Button layoutY="30.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="193.0" text="ATM 3">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Button>
+            <Label layoutX="22.0" layoutY="188.0" prefHeight="25.0" prefWidth="100.0" text="Hundreds" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="130.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="239.0" prefHeight="25.0" prefWidth="100.0" text="Fifties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="287.0" prefHeight="25.0" prefWidth="100.0" text="Twenties" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="amount3" layoutX="127.0" layoutY="276.0" onAction="#TakeOut3" prefHeight="25.0" prefWidth="80.0" AnchorPane.bottomAnchor="98.0" AnchorPane.rightAnchor="4.0" />
+            <Label layoutX="16.0" layoutY="282.0" prefHeight="25.0" prefWidth="90.0" text="Amount" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="5.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="335.0" prefHeight="30.0" prefWidth="52.0" text="Hundreds" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="5.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="333.0" prefHeight="30.0" prefWidth="74.0" text="     Fifties" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="64.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="134.0" layoutY="330.0" prefHeight="30.0" prefWidth="60.0" text="Twenties" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hundreds3" layoutX="1.0" layoutY="361.0" prefHeight="25.0" prefWidth="52.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" />
+            <TextField fx:id="fifties3" layoutX="75.0" layoutY="357.0" prefHeight="25.0" prefWidth="60.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="63.0" />
+            <TextField fx:id="twenties3" layoutX="136.0" layoutY="348.0" prefHeight="25.0" prefWidth="60.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="5.0" />
+            <Label fx:id="label3Hundreds" layoutX="155.0" layoutY="130.0" prefHeight="25.0" prefWidth="52.0" text="0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="130.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="label3Fifties" layoutX="131.0" layoutY="157.0" prefHeight="25.0" prefWidth="52.0" text="0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="label3Twenties" layoutX="131.0" layoutY="193.0" prefHeight="25.0" prefWidth="52.0" text="0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
